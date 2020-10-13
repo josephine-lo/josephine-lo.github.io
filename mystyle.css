@@ -4,9 +4,8 @@ body {
 	font-family: proxima-nova, sans-serif;
 	font-style: normal;
 	background-color: #FFFFFF;
-	margin-left: 20%;
-	margin-right: 100px;
-	width: 75%;
+	margin-left: 22%;
+	width: 70%;
 }
 
 hr {
@@ -26,6 +25,7 @@ hr {
 	left: 4%;
 	background: #f2f2f2;
 	overflow-x: hidden;
+  /*box-shadow: 10px 10px #a9a9a9;*/
 	padding: 5% 0;
   display: grid;
 }
@@ -299,8 +299,12 @@ a.seeMore:hover, a.seeMore:active{
 }
 
 .hackPic {
+  position: relative;
   width: 15%;
   height: auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  left: 15%;
 }
 
 .intro {
