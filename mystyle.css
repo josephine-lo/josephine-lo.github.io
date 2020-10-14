@@ -73,13 +73,14 @@ figcaption {
   text-decoration: none;
   vertical-align: right;
   font-size: 25px;
-  color: blue; 
+  color: #a9a9a9; 
 	display: inline-block;
+  letter-spacing: 1px;
 }
 .options a:hover {
-	color: blue }
+	color: #c3c3c3 }
 a:visited {
-	color: purple }
+	color: #a9a9a9 }
 
 @media screen and (max-height: 450px) {
 	.sidenav { padding-top: 15px; }
