@@ -18,7 +18,7 @@ code {
 	font-family: 'Inconsolata', Consolas, monospace;
 	font-size: 20px;
   margin-top: -33.5%;
-  margin-left: 22%;
+  margin-left: 17%;
 }
 
 .greet h1 {
@@ -34,7 +34,7 @@ code {
 }
 
 .greet p:nth-child(1) {
-  width: 35%;
+  width: 31%;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
@@ -66,7 +66,7 @@ code {
 }
 
 .greet p:nth-child(4) {
-  width: 35%;
+  width: 31.5%;
   opacity: 0;
   -webkit-animation: type3 5s steps(40, end), blink .5s step-end infinite alternate;
   animation: type3 3s steps(40, end), blink .5s step-end infinite alternate;

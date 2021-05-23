@@ -20,7 +20,7 @@ const headerStyle = {
 const subheaderStyle = {
   color: 'white',
   letterSpacing: '3px',
-  marginLeft: '-50vw',
+  marginLeft: '-52vw',
   marginTop: '15vh',
   fontSize: '35px'
   // marginTop: '-30vh'
@@ -49,8 +49,8 @@ const App = () => {
           <h1 style={headerStyle}>
               Josephine Lo
               <br />
-              <Button variant="outline-dark" href='mailto:jlo2@scu.edu' style={{borderRadius: '90%', fontSize: '25px'}}><FaRegEnvelope /></Button>
-              <Button variant="outline-dark" href='https://www.linkedin.com/in/lo-josephine/' target='_blank' style={{borderRadius: '90%', fontSize: '25px'}}><FaLinkedinIn /></Button>
+              <Button variant="outline-dark" href='mailto:jlo2@scu.edu' style={{borderRadius: '90%', fontSize: '25px', marginRight: '5%'}}><FaRegEnvelope /></Button>
+              <Button variant="outline-dark" href='https://www.linkedin.com/in/lo-josephine/' target='_blank' style={{borderRadius: '90%', fontSize: '25px', marginRight: '5%'}}><FaLinkedinIn /></Button>
               <Button variant="outline-dark" href='https://github.com/josephine-lo' target='_blank' style={{borderRadius: '90%', fontSize: '25px'}}><FiGithub /></Button>
           </h1>
           <img src={portrait} className="portrait" alt="Portrait of Josephine Lo" />
@@ -63,6 +63,9 @@ const App = () => {
           <div className="window-circ" style={{marginLeft: '21vw', marginTop: '-38vh', backgroundColor: '#FF8787'}}></div>
           <div className="window-circ" style={{marginLeft: '22.5vw', marginTop: '-1.94vh', backgroundColor: '#F0D800'}}></div>
           <div className="window-circ" style={{marginLeft: '24vw', marginTop: '-1.9vh', backgroundColor: '#7EE000'}}></div>
+          <h3 style={{maxWidth: '27vw', textAlign: 'left', marginLeft:'57vw', lineHeight: '50px'}}
+          >&ensp;Hi there! I'm Josephine Lo and I'm studying CS with an emphasis in <b>Software</b>. My interests lie in mobile and web technologies, software testing, and HCI. When I'm not coding, you can catch me drawing or walking my chihuahua! </h3>
+        
         </div>
 
         <div className="projects">

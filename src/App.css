@@ -41,6 +41,7 @@
 .aboutMe {
   min-width: 100vw;
   min-height: 70vh;
+  margin-left: -5vw;
   /* display: flex;
   justify-content:center;
   align-items: center; */
