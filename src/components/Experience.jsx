@@ -1,48 +1,65 @@
-import React from "react";
+import Reveal from './Reveal';
+
+const pastelTags = [
+  'bg-pastel-blue-bg text-pastel-blue-text',
+  'bg-pastel-green-bg text-pastel-green-text',
+  'bg-pastel-yellow-bg text-pastel-yellow-text',
+  'bg-pastel-red-bg text-pastel-red-text',
+];
 
 const Experience = ({ experiences = [] }) => {
-  if (!experiences || experiences.length === 0) {
-    return <p className="coming-soon">Coming soon...</p>;
+  if (!experiences.length) {
+    return <p className="text-muted italic">Experience details coming soon.</p>;
   }
 
   return (
-    <div className="experience-list">
+    <ol className="relative space-y-0">
       {experiences.map((exp, index) => (
-        <div key={index} className="experience-item">
-          <div className="experience-header">
-            <div className="experience-title-row">
-              <h3 className="experience-title">{exp.title}</h3>
-              {exp.company && (
-                <span className="experience-company">{exp.company}</span>
-              )}
-            </div>
-            <div className="experience-meta">
-              {exp.date && <span className="experience-date">{exp.date}</span>}
+        <Reveal key={`${exp.company}-${exp.date}`} delay={index * 50}>
+          <li className="experience-row grid gap-6 border-b border-border py-10 md:grid-cols-[12rem_1fr] md:gap-12 md:py-12">
+            <div>
+              <time className="font-mono text-xs text-muted">{exp.date}</time>
               {exp.location && (
-                <span className="experience-location">{exp.location}</span>
+                <p className="mt-1 text-xs text-muted">{exp.location}</p>
               )}
             </div>
-          </div>
-          {exp.description && (
-            <p className="experience-description">{exp.description}</p>
-          )}
-          {exp.responsibilities && exp.responsibilities.length > 0 && (
-            <ul className="experience-responsibilities">
-              {exp.responsibilities.map((responsibility, idx) => (
-                <li key={idx}>{"◦ " + responsibility}</li>
-              ))}
-            </ul>
-          )}
-          {exp.tags && exp.tags.length > 0 && (
-            <div className="experience-tags">
-              {exp.tags.map((tag, idx) => (
-                <span key={idx} className="experience-tag">{tag}</span>
-              ))}
+
+            <div>
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h3 className="font-serif text-xl tracking-tight text-ink">
+                  {exp.title}
+                </h3>
+                <span className="text-sm text-muted">at {exp.company}</span>
+              </div>
+
+              {exp.responsibilities && exp.responsibilities.length > 0 && (
+                <ul className="mt-5 max-w-prose space-y-3 text-sm leading-relaxed text-muted">
+                  {exp.responsibilities.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" aria-hidden="true" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {exp.tags && exp.tags.length > 0 && (
+                <ul className="mt-6 flex flex-wrap gap-2" aria-label="Technologies">
+                  {exp.tags.map((tag, tagIndex) => (
+                    <li
+                      key={tag}
+                      className={`tag ${pastelTags[tagIndex % pastelTags.length]}`}
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-          )}
-        </div>
+          </li>
+        </Reveal>
       ))}
-    </div>
+    </ol>
   );
 };
 
